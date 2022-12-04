@@ -1,7 +1,22 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
-function MoviePage({movie}){
+function MoviePage({}){
 
+  const {movieId} = useParams();
+  console.log(movieId)
+
+return (
+  <div>movie page</div>
+)
+
+
+}
+
+export default MoviePage;
+
+
+/*
   const { id, title, director, year, subgenre, description } = movie;
 
 
@@ -16,8 +31,4 @@ function MoviePage({movie}){
     </div>
    
   )
-
-
-}
-
-export default MoviePage;
+*/

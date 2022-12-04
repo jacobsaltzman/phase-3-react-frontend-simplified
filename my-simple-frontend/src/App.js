@@ -25,10 +25,13 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/movies">Movies</Link>
         <Switch>
-          <Route path='/movies'>
+          <Route exact path="/">
+          <div>Home</div>
+          </Route>
+          <Route exact path='/movies'>
             <Movies movies={movies} onAddMovie={onAddMovie}/>
           </Route>
-          <Route path="/movies/:id">
+          <Route path="/movies/:movieId">
             <MoviePage />
           </Route>
         </Switch>

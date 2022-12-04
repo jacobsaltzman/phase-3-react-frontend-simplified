@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import MovieContainer from "./MovieContainer";
+import { Route, useRouteMatch } from "react-router-dom";
+import MoviePage from "./MoviePage";
 
 
 function Movies ({movies, onAddMovie}){
+
+  const match = useRouteMatch();
+  
 
   const[formData, setFormData] = useState({
     title: "",
@@ -51,6 +56,10 @@ function Movies ({movies, onAddMovie}){
       <h4>Read all the movies.</h4>
       <MovieContainer movies={movies}/>
     </div>
+
+    <Route path={`${match.url}/:movieId`}>
+        <MoviePage />
+      </Route>
 
     <form className="new-movie-form" onSubmit={handleSubmit}>
         <h4>Create A New Movie</h4>
