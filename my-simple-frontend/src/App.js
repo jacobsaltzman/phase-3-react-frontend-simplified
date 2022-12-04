@@ -32,7 +32,7 @@ function App() {
             <Movies movies={movies} onAddMovie={onAddMovie}/>
           </Route>
           <Route path="/movies/:movieId">
-            <MoviePage />
+            <MoviePage movies={movies}/>
           </Route>
         </Switch>
       </header>

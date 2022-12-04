@@ -1,13 +1,20 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-function MoviePage({}){
+function MoviePage({movies}){
 
   const {movieId} = useParams();
-  console.log(movieId)
+  const movie = movies[movieId -1] //minus one to account for the array offset
 
 return (
-  <div>movie page</div>
+  <div className="page" id={movie.id}>
+      
+      <h1>{movie.title}</h1>
+      <img alt="movie poster" src={movie.image}></img>
+      <h3>Directed by: {movie.director}</h3> 
+      <p>{movie.title} is a {movie.subgenre} horror movie, originally released in {movie.year}</p>
+      <p>Synopsis: {movie.description}</p>
+    </div>
 )
 
 
@@ -22,13 +29,7 @@ export default MoviePage;
 
 
   return(
-    <div className="page" id={id}>
-      
-      <h1>{title}</h1>
-      <h3>Directed by: {director}</h3> 
-      <p>{title} is a {subgenre} horror movie, originally released in {year}</p>
-      <p>Synopsis: {description}</p>
-    </div>
+    
    
   )
 */
