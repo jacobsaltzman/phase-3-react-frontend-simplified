@@ -2,14 +2,15 @@ import React, {useState} from "react";
 import MovieContainer from "./MovieContainer";
 
 
-function Home ({movies, onAddMovie}){
+function Movies ({movies, onAddMovie}){
 
   const[formData, setFormData] = useState({
     title: "",
     director: "",
     subgenre: "",
     year: "",
-    image: ""
+    image: "",
+    description: ""
   })
 
   function handleChange(e) {
@@ -36,7 +37,8 @@ function Home ({movies, onAddMovie}){
           director: "",
           subgenre: "",
           year: "",
-          image: ""
+          image: "",
+          description: ""
         });
       });
       alert("Added to the Movies DB! Thanks for contributing");
@@ -46,12 +48,12 @@ function Home ({movies, onAddMovie}){
   return(
     <div>
       <div id='main-movie-list'>
-      <h4>This is all the movies.</h4>
+      <h4>Read all the movies.</h4>
       <MovieContainer movies={movies}/>
     </div>
 
     <form className="new-movie-form" onSubmit={handleSubmit}>
-        <h3>Add New Movie</h3>
+        <h4>Create A New Movie</h4>
 
         <label>Title</label>
         <input type="text" id="title" name="title" onChange={handleChange} value={formData.title}/>
@@ -80,6 +82,8 @@ function Home ({movies, onAddMovie}){
         <label>Image URL</label>
         <input type="text" id="image" name="image" onChange={handleChange} value={formData.image}></input>
 
+        <label>Description</label>
+        <input type="text" id="description" name="description" onChange={handleChange} value={formData.description}></input>
 
         <button type="submit">Add Movie</button>
       </form>
@@ -87,4 +91,4 @@ function Home ({movies, onAddMovie}){
   )
 }
 
-export default Home;
+export default Movies;

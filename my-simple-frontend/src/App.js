@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
-import Home from './components/Home';
+import Movies from './components/Movies';
+import MoviePage from './components/MoviePage';
 
 
 function App() {
@@ -20,11 +21,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h4>Horror Rater</h4>
+        <h4>Horror Rater Simplified</h4>
         <Link to="/">Home</Link>
+        <Link to="/movies">Movies</Link>
         <Switch>
-          <Route path='/'>
-            <Home movies={movies} onAddMovie={onAddMovie}/>
+          <Route path='/movies'>
+            <Movies movies={movies} onAddMovie={onAddMovie}/>
+          </Route>
+          <Route path="/movies/:id">
+            <MoviePage />
           </Route>
         </Switch>
       </header>

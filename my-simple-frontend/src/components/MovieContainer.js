@@ -1,16 +1,17 @@
 import React from "react";
-import MovieCard from "./MovieCard";
+import { Link, useParams } from "react-router-dom";
 
 function MovieContainer({movies}){
+
+  const params = useParams();
 
   return(
     <ul className="container">
       {movies.map((movie) => {
         return (
-          <MovieCard
-          key={movie.id}
-          movie={movie}
-          />
+          <div>
+          <Link to={`/movies/${movie.id}`} className="movie-link">{movie.title}</Link>
+          </div>
         )
       })}
     </ul>
