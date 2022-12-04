@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom";
-import React from 'react';
+import React from "react";
 
-
-function MovieCard({movie}){
-
-
+function MoviePage({movie}){
 
   const { id, title, director, year, subgenre, description } = movie;
 
@@ -18,7 +14,10 @@ function MovieCard({movie}){
       <p>{title} is a {subgenre} horror movie, originally released in {year}</p>
       <p>Synopsis: {description}</p>
     </div>
+   
   )
+
+
 }
 
-export default MovieCard;
+export default MoviePage;
