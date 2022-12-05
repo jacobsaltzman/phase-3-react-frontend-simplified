@@ -17,7 +17,7 @@ function ReviewsContainer({reviews, id}){
 
   const handleDeleteReview = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget.id)
+    
 
     fetch(`http://localhost:9292/reviews/${e.currentTarget.id}`, {
         method: "DELETE",
@@ -45,7 +45,7 @@ if (allReviews !== undefined){
     <ul className='review-list'>
       {allReviews.map((review) => {
         return(
-          <li id={review.id} key={review.id}>Anon says: "{review.comments}", rating it a {review.user_rating} out of 5 overall and a scare factor of {review.scare_scale}!<button id={review.id} type='submit' onClick={handleDeleteReview}>X</button></li>
+          <li id={review.id} key={review.id}>Anon says: "{review.comments}", rating it a {review.user_rating} out of 5 overall and a scare factor of {review.scare_scale}!<button id={review.id} type='submit' onClick={handleDeleteReview}>Delete The Review</button></li>
         )
       })}
     </ul>
