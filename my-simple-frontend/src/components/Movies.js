@@ -43,8 +43,7 @@ function Movies ({movies, onAddMovie}){
           subgenre: "",
           year: "",
           image: "",
-          description: "",
-          reviews: ""
+          description: ""
         });
       });
       alert("Added to the Movies DB! Thanks for contributing");

@@ -6,9 +6,16 @@ function ReviewsContainer({reviews, id}){
   const[allReviews, setAllReviews] = useState(reviews)
 
   function onAddReview(newReview){
+    if (allReviews === undefined){
+      const allReviews = []
+      setAllReviews([...allReviews, newReview])
+    }
+    else { 
     setAllReviews([...allReviews, newReview])
+    }
   }
   
+ 
 
 if (allReviews !== undefined){
   
@@ -24,7 +31,7 @@ if (allReviews !== undefined){
       })}
     </ul>
     
-    <ReviewForm setAllReviews={setAllReviews} onAddReview={onAddReview} id={id}/>
+      <ReviewForm setAllReviews={setAllReviews} onAddReview={onAddReview} id={id}/>
     </div>
   )
 
@@ -35,7 +42,7 @@ if (allReviews !== undefined){
     return(
       <div>
       <p>No Reviews Yet. Add one.</p>
-      <ReviewForm setAllReviews={setAllReviews} onAddReview={onAddReview} id={id}/>
+        <ReviewForm setAllReviews={setAllReviews} onAddReview={onAddReview} id={id}/>
       </div>
     )
   }
