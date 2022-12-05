@@ -19,7 +19,7 @@ return (
       <p>Synopsis: {movie.description}</p>
 
       <h4>Read the Reviews:</h4>
-      <ReviewsContainer reviews={reviews}/>
+      <ReviewsContainer reviews={reviews} id={movie.id}/>
     </div>
 )
 
@@ -27,15 +27,3 @@ return (
 }
 
 export default MoviePage;
-
-
-/*
-  const { id, title, director, year, subgenre, description } = movie;
-
-
-
-  return(
-    
-   
-  )
-*/
