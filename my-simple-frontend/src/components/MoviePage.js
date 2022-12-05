@@ -6,7 +6,7 @@ import ReviewsContainer from "./ReviewsContainer";
 function MoviePage({movies}){
 
   const {movieId} = useParams();
-  const movie = movies[movieId -1] //minus one to account for the array offset
+  const movie = movies[movieId -1] 
   const reviews = movie.reviews
 
 return (
