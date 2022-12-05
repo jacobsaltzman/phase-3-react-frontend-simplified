@@ -1,6 +1,6 @@
 import React from "react";
 
-function Reviews(){
+function ReviewsContainer(){
 
   return(
 
@@ -8,4 +8,4 @@ function Reviews(){
   )
 }
 
-export default Reviews;
+export default ReviewsContainer;

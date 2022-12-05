@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Reviews from "./ReviewsContainer";
+import ReviewsContainer from "./ReviewsContainer";
+
 
 function MoviePage({movies}){
 
@@ -18,7 +19,7 @@ return (
       <p>Synopsis: {movie.description}</p>
 
       <h1>Reviews:</h1>
-      <Reviews reviews={reviews}/>
+      <ReviewsContainer reviews={reviews}/>
     </div>
 )
 
