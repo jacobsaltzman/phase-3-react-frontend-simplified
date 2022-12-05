@@ -18,7 +18,7 @@ return (
       <p>{movie.title} is a {movie.subgenre} horror movie, originally released in {movie.year}</p>
       <p>Synopsis: {movie.description}</p>
 
-      <h1>Reviews:</h1>
+      <h4>Read the Reviews:</h4>
       <ReviewsContainer reviews={reviews}/>
     </div>
 )
