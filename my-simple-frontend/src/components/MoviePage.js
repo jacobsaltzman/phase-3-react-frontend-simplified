@@ -7,7 +7,6 @@ function MoviePage({movies}){
   const {movieId} = useParams();
   const movie = movies[movieId -1] //minus one to account for the array offset
   const reviews = movie.reviews
-  console.log(reviews)
 
 return (
   <div className="page" id={movie.id}>
@@ -19,7 +18,7 @@ return (
       <p>Synopsis: {movie.description}</p>
 
       <h1>Reviews:</h1>
-      <Reviews />
+      <Reviews reviews={reviews}/>
     </div>
 )
 
