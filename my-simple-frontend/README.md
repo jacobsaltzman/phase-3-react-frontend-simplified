@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Phase 3 Project Horror Rater -- Frontend UI Simplified
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## A hard fork of the original Horror Rater project found here:
 
-In the project directory, you can run:
+https://github.com/jacobsaltzman/phase-3-react-frontend/tree/third 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Simplified Changes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Removes the User components -- all read and create, signin, usernames to reviews, ect.
 
-### `npm test`
+-Collapses several components into one to simplify the UI.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-Makes the list of *movies* clickable, rendering a seperate "page" with all of its details and *reviews*.
 
-### `npm run build`
+-Moves the 'create movie' functionality under the list of movies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-Adds the full CRUD for *reviews* to each individual movie.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Description
+  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+An app hosting a list of horror movies with details for each, including director, release date, and sub-genre. Among that list of movies, one can make reviews -- post comments and ratings, both on overall quality of the film and the scariness factor of each individual movie.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Introduction
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project's focus is **Ruby** and OOP in which I **built a Sinatra API backend** that uses
+**Active Record** to access and persist data in a database, which is used by this separate **React frontend** that interacts with the database via the API. To view the **API** navigate to:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://github.com/jacobsaltzman/phase-3-sinatra-simplified
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Usage
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+In this frontend app, users can:
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[✔️] Navigate to a movie page that has a list of the current movies including:
 
-### Advanced Configuration
+    - a link that navigates to a new "page" where you can see more details and make a review for that movie.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+[✔️] Contribute to the movie list by using a movie create form to add a movie to the database and list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+[✔️] View the reviews for every movie, and where "users" can:
+    -delete a review
+    -edit a review
+    -post a new review
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## MVP
+
+
+-Adds the functionality of creating a new movie and "read" all movies on the page.
+
+
+-Adds the ability to dynamically select the movie that you want to see more about.
+
+
+-The Review component has full CRUD -- create, read, update, destroy.
+
+
+-The fetch requests are limited to one, and the nested data is used optimally. 
+
+
+
+## Getting Started
+
+
+### Frontend Setup
+
+To launch the app `cd` into the main project directory. Once there, run:
+
+```console
+$ npm start
+```
+
+After starting the project locally, you should be able to view it at
+[http://localhost:3000].
+
+
+### Backend Setup
+
+
+See backend repo for details on how to set up the server.
+
+https://github.com/jacobsaltzman/phase-3-sinatra-simplified 
+
+
+
+## Project Extras
+
+- This project is intended to focus more on the backend than the frontend. It mainly focuses on working with
+  Active Record and performing CRUD actions.
+  
+- Future additions would be to include user login authentication.
+
